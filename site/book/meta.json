@@ -1,0 +1,773 @@
+{
+ "title": "The Laws of Human Nature",
+ "author": "Robert Greene",
+ "cover": "img/cover.jpg",
+ "totalChars": 1531268,
+ "sections": [
+  {
+   "id": "s00",
+   "kind": "cover",
+   "title": "Cover",
+   "number": null,
+   "subtitle": null,
+   "file": "sections/00.json",
+   "chars": 0,
+   "blocks": 1,
+   "headings": []
+  },
+  {
+   "id": "s01",
+   "kind": "front",
+   "title": "Also by Robert Greene",
+   "number": null,
+   "subtitle": null,
+   "file": "sections/01.json",
+   "chars": 185,
+   "blocks": 5,
+   "headings": []
+  },
+  {
+   "id": "s02",
+   "kind": "front",
+   "title": "Title Page",
+   "number": null,
+   "subtitle": null,
+   "file": "sections/02.json",
+   "chars": 0,
+   "blocks": 1,
+   "headings": []
+  },
+  {
+   "id": "s03",
+   "kind": "front",
+   "title": "Copyright",
+   "number": null,
+   "subtitle": null,
+   "file": "sections/03.json",
+   "chars": 663,
+   "blocks": 12,
+   "headings": []
+  },
+  {
+   "id": "s04",
+   "kind": "front",
+   "title": "Dedication",
+   "number": null,
+   "subtitle": null,
+   "file": "sections/04.json",
+   "chars": 12,
+   "blocks": 1,
+   "headings": []
+  },
+  {
+   "id": "s05",
+   "kind": "part",
+   "title": "Introduction",
+   "number": null,
+   "subtitle": null,
+   "file": "sections/05.json",
+   "chars": 28052,
+   "blocks": 58,
+   "headings": []
+  },
+  {
+   "id": "s06",
+   "kind": "chapter",
+   "title": "Master Your Emotional Self",
+   "number": 1,
+   "subtitle": "The Law of Irrationality",
+   "file": "sections/06.json",
+   "chars": 73557,
+   "blocks": 129,
+   "headings": [
+    {
+     "b": 1,
+     "t": "h2",
+     "text": "The Inner Athena"
+    },
+    {
+     "b": 35,
+     "t": "h2",
+     "text": "Keys to Human Nature"
+    },
+    {
+     "b": 62,
+     "t": "h2",
+     "text": "Step One: Recognize the Biases"
+    },
+    {
+     "b": 64,
+     "t": "h3",
+     "text": "Confirmation Bias"
+    },
+    {
+     "b": 69,
+     "t": "h3",
+     "text": "Conviction Bias"
+    },
+    {
+     "b": 72,
+     "t": "h3",
+     "text": "Appearance Bias"
+    },
+    {
+     "b": 75,
+     "t": "h3",
+     "text": "The Group Bias"
+    },
+    {
+     "b": 78,
+     "t": "h3",
+     "text": "The Blame Bias"
+    },
+    {
+     "b": 81,
+     "t": "h3",
+     "text": "Superiority Bias"
+    },
+    {
+     "b": 85,
+     "t": "h2",
+     "text": "Step Two: Beware the Inflaming Factors"
+    },
+    {
+     "b": 88,
+     "t": "h3",
+     "text": "Trigger Points from Early Childhood"
+    },
+    {
+     "b": 94,
+     "t": "h3",
+     "text": "Sudden Gains or Losses"
+    },
+    {
+     "b": 98,
+     "t": "h3",
+     "text": "Rising Pressure"
+    },
+    {
+     "b": 101,
+     "t": "h3",
+     "text": "Inflaming Individuals"
+    },
+    {
+     "b": 104,
+     "t": "h3",
+     "text": "The Group Effect"
+    },
+    {
+     "b": 113,
+     "t": "h2",
+     "text": "Step Three: Strategies Toward Bringing Out the Rational Self"
+    }
+   ]
+  },
+  {
+   "id": "s07",
+   "kind": "chapter",
+   "title": "Transform Self-love into Empathy",
+   "number": 2,
+   "subtitle": "The Law of Narcissism",
+   "file": "sections/07.json",
+   "chars": 80464,
+   "blocks": 114,
+   "headings": [
+    {
+     "b": 1,
+     "t": "h2",
+     "text": "The Narcissistic Spectrum"
+    },
+    {
+     "b": 46,
+     "t": "h2",
+     "text": "Four Examples of Narcissistic Types"
+    }
+   ]
+  },
+  {
+   "id": "s08",
+   "kind": "chapter",
+   "title": "See Through People’s Masks",
+   "number": 3,
+   "subtitle": "The Law of Role-playing",
+   "file": "sections/08.json",
+   "chars": 78106,
+   "blocks": 116,
+   "headings": [
+    {
+     "b": 1,
+     "t": "h2",
+     "text": "The Second Language"
+    },
+    {
+     "b": 35,
+     "t": "h2",
+     "text": "Keys to Human Nature"
+    },
+    {
+     "b": 44,
+     "t": "h2",
+     "text": "Observational Skills"
+    },
+    {
+     "b": 61,
+     "t": "h2",
+     "text": "Decoding Keys"
+    },
+    {
+     "b": 101,
+     "t": "h2",
+     "text": "The Art of Impression Management"
+    }
+   ]
+  },
+  {
+   "id": "s09",
+   "kind": "chapter",
+   "title": "Determine the Strength of People’s Character",
+   "number": 4,
+   "subtitle": "The Law of Compulsive Behavior",
+   "file": "sections/09.json",
+   "chars": 75684,
+   "blocks": 110,
+   "headings": [
+    {
+     "b": 1,
+     "t": "h2",
+     "text": "The Pattern"
+    },
+    {
+     "b": 33,
+     "t": "h2",
+     "text": "Keys to Human Nature"
+    },
+    {
+     "b": 51,
+     "t": "h2",
+     "text": "Character Signs"
+    },
+    {
+     "b": 74,
+     "t": "h2",
+     "text": "Toxic Types"
+    },
+    {
+     "b": 97,
+     "t": "h2",
+     "text": "The Superior Character"
+    }
+   ]
+  },
+  {
+   "id": "s10",
+   "kind": "chapter",
+   "title": "Become an Elusive Object of Desire",
+   "number": 5,
+   "subtitle": "The Law of Covetousness",
+   "file": "sections/10.json",
+   "chars": 47891,
+   "blocks": 76,
+   "headings": [
+    {
+     "b": 1,
+     "t": "h2",
+     "text": "The Object of Desire"
+    },
+    {
+     "b": 29,
+     "t": "h2",
+     "text": "Keys to Human Nature"
+    },
+    {
+     "b": 45,
+     "t": "h2",
+     "text": "Strategies for Stimulating Desire"
+    },
+    {
+     "b": 65,
+     "t": "h2",
+     "text": "The Supreme Desire"
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "kind": "chapter",
+   "title": "Elevate Your Perspective",
+   "number": 6,
+   "subtitle": "The Law of Shortsightedness",
+   "file": "sections/11.json",
+   "chars": 55025,
+   "blocks": 87,
+   "headings": [
+    {
+     "b": 1,
+     "t": "h2",
+     "text": "Moments of Madness"
+    },
+    {
+     "b": 33,
+     "t": "h2",
+     "text": "Keys to Human Nature"
+    },
+    {
+     "b": 50,
+     "t": "h2",
+     "text": "Four Signs of Shortsightedness and Strategies to Overcome Them"
+    },
+    {
+     "b": 79,
+     "t": "h2",
+     "text": "The Farsighted Human"
+    }
+   ]
+  },
+  {
+   "id": "s12",
+   "kind": "chapter",
+   "title": "Soften People’s Resistance by Confirming Their Self-opinion",
+   "number": 7,
+   "subtitle": "The Law of Defensiveness",
+   "file": "sections/12.json",
+   "chars": 78742,
+   "blocks": 134,
+   "headings": [
+    {
+     "b": 1,
+     "t": "h2",
+     "text": "The Influence Game"
+    },
+    {
+     "b": 46,
+     "t": "h2",
+     "text": "Keys to Human Nature"
+    },
+    {
+     "b": 70,
+     "t": "h2",
+     "text": "Five Strategies for Becoming a Master Persuader"
+    },
+    {
+     "b": 117,
+     "t": "h2",
+     "text": "The Flexible Mind—Self-strategies"
+    }
+   ]
+  },
+  {
+   "id": "s13",
+   "kind": "chapter",
+   "title": "Change Your Circumstances by Changing Your Attitude",
+   "number": 8,
+   "subtitle": "The Law of Self-sabotage",
+   "file": "sections/13.json",
+   "chars": 74598,
+   "blocks": 123,
+   "headings": [
+    {
+     "b": 1,
+     "t": "h2",
+     "text": "The Ultimate Freedom"
+    },
+    {
+     "b": 41,
+     "t": "h2",
+     "text": "Keys to Human Nature"
+    },
+    {
+     "b": 62,
+     "t": "h2",
+     "text": "The Constricted (Negative) Attitude"
+    },
+    {
+     "b": 95,
+     "t": "h2",
+     "text": "The Expansive (Positive) Attitude"
+    }
+   ]
+  },
+  {
+   "id": "s14",
+   "kind": "chapter",
+   "title": "Confront Your Dark Side",
+   "number": 9,
+   "subtitle": "The Law of Repression",
+   "file": "sections/14.json",
+   "chars": 78151,
+   "blocks": 132,
+   "headings": [
+    {
+     "b": 1,
+     "t": "h2",
+     "text": "The Dark Side"
+    },
+    {
+     "b": 44,
+     "t": "h2",
+     "text": "Keys to Human Nature"
+    },
+    {
+     "b": 73,
+     "t": "h2",
+     "text": "Deciphering the Shadow: Contradictory Behavior"
+    },
+    {
+     "b": 98,
+     "t": "h2",
+     "text": "The Integrated Human"
+    }
+   ]
+  },
+  {
+   "id": "s15",
+   "kind": "chapter",
+   "title": "Beware the Fragile Ego",
+   "number": 10,
+   "subtitle": "The Law of Envy",
+   "file": "sections/15.json",
+   "chars": 78220,
+   "blocks": 139,
+   "headings": [
+    {
+     "b": 1,
+     "t": "h2",
+     "text": "Fatal Friends"
+    },
+    {
+     "b": 47,
+     "t": "h2",
+     "text": "Keys to Human Nature"
+    },
+    {
+     "b": 59,
+     "t": "h2",
+     "text": "Signs of Envy"
+    },
+    {
+     "b": 72,
+     "t": "h2",
+     "text": "Envier Types"
+    },
+    {
+     "b": 97,
+     "t": "h2",
+     "text": "Envy Triggers"
+    },
+    {
+     "b": 116,
+     "t": "h2",
+     "text": "Beyond Envy"
+    }
+   ]
+  },
+  {
+   "id": "s16",
+   "kind": "chapter",
+   "title": "Know Your Limits",
+   "number": 11,
+   "subtitle": "The Law of Grandiosity",
+   "file": "sections/16.json",
+   "chars": 76068,
+   "blocks": 120,
+   "headings": [
+    {
+     "b": 1,
+     "t": "h2",
+     "text": "The Success Delusion"
+    },
+    {
+     "b": 46,
+     "t": "h2",
+     "text": "Keys to Human Nature"
+    },
+    {
+     "b": 80,
+     "t": "h2",
+     "text": "The Grandiose Leader"
+    },
+    {
+     "b": 98,
+     "t": "h2",
+     "text": "Practical Grandiosity"
+    }
+   ]
+  },
+  {
+   "id": "s17",
+   "kind": "chapter",
+   "title": "Reconnect to the Masculine or Feminine Within You",
+   "number": 12,
+   "subtitle": "The Law of Gender Rigidity",
+   "file": "sections/17.json",
+   "chars": 95133,
+   "blocks": 147,
+   "headings": [
+    {
+     "b": 1,
+     "t": "h2",
+     "text": "The Authentic Gender"
+    },
+    {
+     "b": 56,
+     "t": "h2",
+     "text": "Keys to Human Nature"
+    },
+    {
+     "b": 88,
+     "t": "h2",
+     "text": "Gender Projection—Types"
+    },
+    {
+     "b": 115,
+     "t": "h2",
+     "text": "The Original Man/Woman"
+    }
+   ]
+  },
+  {
+   "id": "s18",
+   "kind": "chapter",
+   "title": "Advance with a Sense of Purpose",
+   "number": 13,
+   "subtitle": "The Law of Aimlessness",
+   "file": "sections/18.json",
+   "chars": 90265,
+   "blocks": 156,
+   "headings": [
+    {
+     "b": 1,
+     "t": "h2",
+     "text": "The Voice"
+    },
+    {
+     "b": 63,
+     "t": "h2",
+     "text": "Keys to Human Nature"
+    },
+    {
+     "b": 97,
+     "t": "h2",
+     "text": "Strategies for Developing a High Sense of Purpose"
+    },
+    {
+     "b": 129,
+     "t": "h2",
+     "text": "The Lure of False Purposes"
+    }
+   ]
+  },
+  {
+   "id": "s19",
+   "kind": "chapter",
+   "title": "Resist the Downward Pull of the Group",
+   "number": 14,
+   "subtitle": "The Law of Conformity",
+   "file": "sections/19.json",
+   "chars": 122793,
+   "blocks": 209,
+   "headings": [
+    {
+     "b": 1,
+     "t": "h2",
+     "text": "An Experiment in Human Nature"
+    },
+    {
+     "b": 71,
+     "t": "h2",
+     "text": "Keys to Human Nature"
+    },
+    {
+     "b": 93,
+     "t": "h3",
+     "text": "The Individual Effect"
+    },
+    {
+     "b": 112,
+     "t": "h3",
+     "text": "Group Dynamics"
+    },
+    {
+     "b": 150,
+     "t": "h2",
+     "text": "The Court and Its Courtiers"
+    },
+    {
+     "b": 179,
+     "t": "h2",
+     "text": "The Reality Group"
+    }
+   ]
+  },
+  {
+   "id": "s20",
+   "kind": "chapter",
+   "title": "Make Them Want to Follow You",
+   "number": 15,
+   "subtitle": "The Law of Fickleness",
+   "file": "sections/20.json",
+   "chars": 91076,
+   "blocks": 153,
+   "headings": [
+    {
+     "b": 1,
+     "t": "h2",
+     "text": "The Entitlement Curse"
+    },
+    {
+     "b": 72,
+     "t": "h2",
+     "text": "Keys to Human Nature"
+    },
+    {
+     "b": 109,
+     "t": "h2",
+     "text": "Strategies for Establishing Authority"
+    },
+    {
+     "b": 140,
+     "t": "h2",
+     "text": "The Inner Authority"
+    }
+   ]
+  },
+  {
+   "id": "s21",
+   "kind": "chapter",
+   "title": "See the Hostility Behind the Friendly Façade",
+   "number": 16,
+   "subtitle": "The Law of Aggression",
+   "file": "sections/21.json",
+   "chars": 117938,
+   "blocks": 191,
+   "headings": [
+    {
+     "b": 1,
+     "t": "h2",
+     "text": "The Sophisticated Aggressor"
+    },
+    {
+     "b": 80,
+     "t": "h2",
+     "text": "Keys to Human Nature"
+    },
+    {
+     "b": 89,
+     "t": "h2",
+     "text": "The Source of Human Aggression"
+    },
+    {
+     "b": 129,
+     "t": "h2",
+     "text": "Passive Aggression—Its Strategies and How to Counter Them"
+    },
+    {
+     "b": 165,
+     "t": "h2",
+     "text": "Controlled Aggression"
+    }
+   ]
+  },
+  {
+   "id": "s22",
+   "kind": "chapter",
+   "title": "Seize the Historical Moment",
+   "number": 17,
+   "subtitle": "The Law of Generational Myopia",
+   "file": "sections/22.json",
+   "chars": 112881,
+   "blocks": 212,
+   "headings": [
+    {
+     "b": 1,
+     "t": "h2",
+     "text": "The Rising Tide"
+    },
+    {
+     "b": 94,
+     "t": "h2",
+     "text": "Keys to Human Nature"
+    },
+    {
+     "b": 106,
+     "t": "h2",
+     "text": "The Generational Phenomenon"
+    },
+    {
+     "b": 127,
+     "t": "h2",
+     "text": "Generational Patterns"
+    },
+    {
+     "b": 164,
+     "t": "h2",
+     "text": "Strategies for Exploiting the Spirit of the Times"
+    },
+    {
+     "b": 182,
+     "t": "h2",
+     "text": "The Human Beyond Time and Death"
+    }
+   ]
+  },
+  {
+   "id": "s23",
+   "kind": "chapter",
+   "title": "Meditate on Our Common Mortality",
+   "number": 18,
+   "subtitle": "The Law of Death Denial",
+   "file": "sections/23.json",
+   "chars": 64155,
+   "blocks": 128,
+   "headings": [
+    {
+     "b": 1,
+     "t": "h2",
+     "text": "The Bullet in the Side"
+    },
+    {
+     "b": 66,
+     "t": "h2",
+     "text": "Keys to Human Nature"
+    },
+    {
+     "b": 85,
+     "t": "h2",
+     "text": "A Philosophy of Life Through Death"
+    }
+   ]
+  },
+  {
+   "id": "s24",
+   "kind": "part",
+   "title": "Acknowledgments",
+   "number": null,
+   "subtitle": null,
+   "file": "sections/24.json",
+   "chars": 2262,
+   "blocks": 8,
+   "headings": []
+  },
+  {
+   "id": "s25",
+   "kind": "part",
+   "title": "Selected Bibliography",
+   "number": null,
+   "subtitle": null,
+   "file": "sections/25.json",
+   "chars": 9122,
+   "blocks": 145,
+   "headings": []
+  },
+  {
+   "id": "s26",
+   "kind": "part",
+   "title": "About the Author",
+   "number": null,
+   "subtitle": null,
+   "file": "sections/26.json",
+   "chars": 225,
+   "blocks": 1,
+   "headings": []
+  }
+ ]
+}

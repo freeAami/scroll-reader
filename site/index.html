@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<title>The Laws of Human Nature — Reader</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
+<meta name="description" content="A Kindle-style scroll reader for The Laws of Human Nature by Robert Greene.">
+<meta name="theme-color" content="#faf8f3" id="theme-color">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Laws of Human Nature">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<div id="progress-line"><div id="progress-line-fill"></div></div>
+
+<header id="topbar" class="bar" aria-label="Reader toolbar">
+  <div class="bar-inner">
+    <button class="icon-btn" id="btn-toc" title="Contents (t)" aria-label="Contents">
+      <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+    </button>
+    <div class="bar-title">
+      <div class="bar-book" id="bar-book">The Laws of Human Nature</div>
+      <div class="bar-chapter" id="bar-chapter"></div>
+    </div>
+    <button class="icon-btn" id="btn-search" title="Search (/)" aria-label="Search">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+    </button>
+    <button class="icon-btn" id="btn-notes" title="Bookmarks &amp; highlights" aria-label="Bookmarks and highlights">
+      <svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg>
+    </button>
+    <button class="icon-btn" id="btn-settings" title="Display settings" aria-label="Display settings">
+      <svg viewBox="0 0 24 24"><path d="M4 19l5-14h2l5 14M6.5 14h7"/><path d="M17 19l1.6-4.5h1.3L21.5 19M18 17h2.3" /></svg>
+    </button>
+  </div>
+</header>
+
+<button id="bookmark-ribbon" title="Bookmark this spot (b)" aria-label="Toggle bookmark">
+  <svg viewBox="0 0 24 24"><path d="M6 2h12v20l-6-4.5L6 22z"/></svg>
+</button>
+
+<main id="reader">
+  <div id="content" class="content"></div>
+  <div id="loading"><div class="spinner"></div><div>Opening your book…</div></div>
+</main>
+
+<footer id="bottombar" class="bar">
+  <div class="bar-inner">
+    <button class="icon-btn small" id="btn-back" title="Back to where you were" hidden>
+      <svg viewBox="0 0 24 24"><path d="M10 7l-5 5 5 5M5 12h14"/></svg>
+    </button>
+    <button class="icon-btn small" id="btn-prev" title="Previous chapter" aria-label="Previous chapter">
+      <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>
+    </button>
+    <div class="scrub">
+      <input type="range" id="scrubber" min="0" max="10000" value="0" aria-label="Book position">
+      <div class="scrub-info">
+        <span id="info-left">0%</span>
+        <span id="info-mid"></span>
+        <span id="info-right"></span>
+      </div>
+    </div>
+    <button class="icon-btn small" id="btn-next" title="Next chapter" aria-label="Next chapter">
+      <svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+    </button>
+    <button class="icon-btn small" id="btn-autoscroll" title="Auto-scroll" aria-label="Auto-scroll">
+      <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    </button>
+  </div>
+</footer>
+
+<div id="autoscroll-ctl" hidden>
+  <span>Auto-scroll</span>
+  <input type="range" id="autoscroll-speed" min="10" max="200" value="45" aria-label="Auto-scroll speed">
+  <button class="chip" id="autoscroll-stop">Stop</button>
+</div>
+
+<!-- Drawers -->
+<div id="scrim"></div>
+
+<aside id="drawer-toc" class="drawer left" aria-label="Contents">
+  <div class="drawer-head"><h2>Contents</h2><button class="icon-btn close" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <div class="drawer-body" id="toc-list"></div>
+</aside>
+
+<aside id="drawer-notes" class="drawer right" aria-label="Bookmarks and highlights">
+  <div class="drawer-head"><h2>Your notes</h2><button class="icon-btn close" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <div class="tabs">
+    <button class="tab active" data-tab="bookmarks">Bookmarks</button>
+    <button class="tab" data-tab="highlights">Highlights</button>
+    <button class="tab" data-tab="stats">Stats</button>
+  </div>
+  <div class="drawer-body">
+    <div id="tab-bookmarks" class="tab-pane active"></div>
+    <div id="tab-highlights" class="tab-pane"></div>
+    <div id="tab-stats" class="tab-pane"></div>
+  </div>
+  <div class="drawer-foot">
+    <button class="chip" id="btn-export">Export notes</button>
+    <button class="chip danger" id="btn-clear-notes">Clear all</button>
+  </div>
+</aside>
+
+<aside id="drawer-search" class="drawer right" aria-label="Search">
+  <div class="drawer-head">
+    <input type="search" id="search-input" placeholder="Search this book" autocomplete="off" autocapitalize="off" spellcheck="false">
+    <button class="icon-btn close" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <div class="drawer-body" id="search-results"><p class="muted">Type at least 2 characters.</p></div>
+</aside>
+
+<aside id="drawer-settings" class="drawer bottom" aria-label="Display settings">
+  <div class="drawer-head"><h2>Display</h2><button class="icon-btn close" data-close aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <div class="drawer-body settings">
+    <div class="row">
+      <span class="label">Theme</span>
+      <div class="seg themes" id="theme-seg">
+        <button data-theme="light" title="Light"><i></i>Light</button>
+        <button data-theme="sepia" title="Sepia"><i></i>Sepia</button>
+        <button data-theme="green" title="Green"><i></i>Green</button>
+        <button data-theme="dark" title="Dark"><i></i>Dark</button>
+        <button data-theme="black" title="Black"><i></i>Black</button>
+      </div>
+    </div>
+    <div class="row">
+      <span class="label">Font size</span>
+      <div class="stepper"><button id="font-dec" aria-label="Smaller text">A<sup>−</sup></button><span id="font-val">18</span><button id="font-inc" aria-label="Larger text">A<sup>+</sup></button></div>
+    </div>
+    <div class="row">
+      <span class="label">Font</span>
+      <div class="seg" id="font-seg">
+        <button data-font="literata" style="font-family:Literata,Georgia,serif">Literata</button>
+        <button data-font="georgia" style="font-family:Georgia,serif">Georgia</button>
+        <button data-font="iowan" style="font-family:'Iowan Old Style',Palatino,'Palatino Linotype','Book Antiqua',serif">Palatino</button>
+        <button data-font="sans" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif">Sans</button>
+        <button data-font="legible" style="font-family:'Atkinson Hyperlegible',sans-serif">Legible</button>
+      </div>
+    </div>
+    <div class="row">
+      <span class="label">Line spacing</span>
+      <div class="seg" id="lh-seg"><button data-lh="1.45">Tight</button><button data-lh="1.65">Normal</button><button data-lh="1.9">Relaxed</button></div>
+    </div>
+    <div class="row">
+      <span class="label">Margins</span>
+      <div class="seg" id="margin-seg"><button data-margin="narrow">Narrow</button><button data-margin="normal">Normal</button><button data-margin="wide">Wide</button></div>
+    </div>
+    <div class="row">
+      <span class="label">Alignment</span>
+      <div class="seg" id="align-seg"><button data-align="left">Left</button><button data-align="justify">Justified</button></div>
+    </div>
+    <div class="row">
+      <span class="label">Brightness</span>
+      <input type="range" id="brightness" min="30" max="100" value="100" aria-label="Brightness">
+    </div>
+    <div class="row toggles">
+      <label><input type="checkbox" id="opt-tapzones"> Tap left/right edge to turn a page</label>
+      <label><input type="checkbox" id="opt-hyphens" checked> Hyphenation</label>
+      <label><input type="checkbox" id="opt-bold"> Bolder text</label>
+      <label><input type="checkbox" id="opt-keepawake"> Keep screen awake while reading</label>
+    </div>
+    <div class="row">
+      <button class="chip" id="btn-fullscreen">Full screen</button>
+      <button class="chip" id="btn-reset-settings">Reset display</button>
+    </div>
+  </div>
+</aside>
+
+<!-- Selection popover -->
+<div id="sel-pop" hidden>
+  <button data-color="yellow" class="swatch yellow" aria-label="Yellow highlight"></button>
+  <button data-color="blue" class="swatch blue" aria-label="Blue highlight"></button>
+  <button data-color="pink" class="swatch pink" aria-label="Pink highlight"></button>
+  <button data-color="green" class="swatch green" aria-label="Green highlight"></button>
+  <span class="sep"></span>
+  <button data-act="note">Note</button>
+  <button data-act="define">Define</button>
+  <button data-act="copy">Copy</button>
+  <button data-act="remove" hidden>Remove</button>
+</div>
+
+<div id="define-pop" hidden></div>
+<div id="toast" hidden></div>
+<div id="dimmer"></div>
+
+<dialog id="note-dialog">
+  <form method="dialog">
+    <h3>Note</h3>
+    <blockquote id="note-quote"></blockquote>
+    <textarea id="note-text" rows="4" placeholder="Write a note…"></textarea>
+    <div class="dialog-actions">
+      <button value="cancel" class="chip">Cancel</button>
+      <button value="save" class="chip primary">Save</button>
+    </div>
+  </form>
+</dialog>
+
+<script src="app.js" defer></script>
+</body>
+</html>
